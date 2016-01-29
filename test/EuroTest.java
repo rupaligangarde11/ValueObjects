@@ -1,5 +1,7 @@
 import org.junit.Test;
 
+import java.util.Objects;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
@@ -23,4 +25,14 @@ public class EuroTest {
         Euro euro = new Euro(10);
         assertNotEquals(euro, null);
     }
+
+    @Test
+    public void shouldCheckThatTenEuroIsNotEqualToDifferentObjectType() {
+        Euro euro = new Euro(10);
+        Object object = new Object();
+        assertNotEquals(euro,object);
+
+    }
+
+    
 }

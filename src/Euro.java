@@ -1,3 +1,4 @@
+import java.awt.font.OpenType;
 import java.util.Objects;
 
 public class Euro {
@@ -7,10 +8,19 @@ public class Euro {
         this.amount = amount;
     }
 
-  @Override
-    public boolean equals(Object object){
-      if(object==null) return false;
-      Euro euro = (Euro) object;
-      return amount == euro.amount;
-  }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Euro euro = (Euro) o;
+
+        return amount == euro.amount;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return amount;
+    }
 }
