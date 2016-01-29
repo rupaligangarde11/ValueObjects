@@ -1,12 +1,14 @@
 public class Euro {
     public final double amount;
-    private double conversionFactor = 1.35;
+    private double conversionFactor;
     public Euro(int amount) {
         this.amount = amount;
+        conversionFactor = 1.35;
     }
 
     public Euro(double amount) {
         this.amount = amount;
+        conversionFactor = 1.35;
     }
 
     @Override
